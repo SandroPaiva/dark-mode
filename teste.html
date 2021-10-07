@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .classe{
+            background: #81a9e6;
+            color: #292929;
+        }
+        .novo-estilo{
+            background: #e6ce81;
+            color: #292929;
+        }
+        .dark-mode{
+            background: #01122b;
+            color: #b6b6b6;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="meu-elemento1">Teste 01</div>
+    <div id="meu-elemento2" class="classe">Teste 02</div>
+    <div id="meu-elemento3" class="classe dark-mode">Teste 03</div>
+
+    <p id="para01">Teste de inserção de cor usando a alteração diretamente do CSS do elemento</p>
+    <p id="para02">Teste de inserção de cor usando a alteração diretamente do CSS do elemento</p>
+
+    <script>
+
+        const meuElemento1 = document.getElementById("meu-elemento1");
+        meuElemento1.classList.add("novo-estilo");
+        //<div id="meu-elemento1" class="classe novo-estilo">Teste 01</div>
+
+        const meuElemento2 = document.getElementById("meu-elemento2");
+        meuElemento2.classList.remove("classe");
+        //<div id="meu-elemento2" class="">Teste 02</div>
+
+        const meuElemento3 = document.getElementById("meu-elemento3");
+        meuElemento3.classList.toggle("dark-mode");
+        //<div id="meu-elemento3" class="classe">Teste 03</div>
+
+        document.getElementById("para01").style.color = "blue";
+        document.getElementById("para02").style.color = "red";
+
+
+
+
+    </script>
+</body>
+</html>
